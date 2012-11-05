@@ -11,10 +11,9 @@ describe "Static pages" do
 
   describe "Home page" do
     before { visit root_path }
-    let(:heading)    { 'Sample App' }
     let(:page_title) { '' }
 
-    it_should_behave_like "all static pages"
+    it { should have_selector('title', text: full_title(page_title)) }
     it { should_not have_selector 'title', text: '| Home' }
 
      describe "for signed-in users" do
@@ -69,7 +68,7 @@ describe "Static pages" do
     click_link "Home"
     click_link "Sign up now!"
     page.should have_selector 'title', text: full_title('Sign up')
-    click_link "sample app"
+    click_link "netgilent microblog"
     page.should have_selector 'title', text: full_title('')
   end
 end

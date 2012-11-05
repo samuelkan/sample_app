@@ -31,6 +31,7 @@ textarea {
 .center {
   text-align: center;
   h1 {
+    font-size: 40px;
     margin-bottom: 10px;
   }
 }
@@ -205,3 +206,12 @@ $grayMediumLight: #eaeaea;
   color: $grayLight;
 }
 
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
